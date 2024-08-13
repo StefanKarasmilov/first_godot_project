@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0w7ytsemaahu"]
+
+[ext_resource type="PackedScene" uid="uid://c3wwdayddktjb" path="res://scenes/ui/joystick/joystick.tscn" id="1_2nkwo"]
+
+[node name="JoystickCanvas" type="CanvasLayer"]
+
+[node name="Joystick" parent="." instance=ExtResource("1_2nkwo")]
+position = Vector2(84, 276)
