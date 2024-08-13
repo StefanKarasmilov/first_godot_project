@@ -54,8 +54,8 @@ func on_resume_pressed():
 
 
 func on_options_pressed():
-	#ScreenTransition.transition()
-	#await ScreenTransition.transition_halfway
+	ScreenTransition.transition()
+	await ScreenTransition.transition_halfway
 	
 	var options_menu_instance = options_menu.instantiate()
 	add_child(options_menu_instance)
@@ -63,11 +63,17 @@ func on_options_pressed():
 
 
 func on_quit_pressed():
+	ScreenTransition.transition()
+	await ScreenTransition.transition_halfway
+	
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://scenes/ui/main_menu.tscn")
 
 
 func on_options_back_pressed(options_menu_scene: Node):
+	ScreenTransition.transition()
+	await ScreenTransition.transition_halfway
+	
 	options_menu_scene.queue_free()
 
 
